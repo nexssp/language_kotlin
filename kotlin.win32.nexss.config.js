@@ -14,7 +14,7 @@ languageConfig.compilers = {
     install: "scoop install kotlin gradle",
     // Cpp does not have possibility to compile and run on the fly. We need to save it as a exe file first.
     command: "kotlinc",
-    args: "<file>",
+    args: "-script <file> --",
     help: ``
   }
 };

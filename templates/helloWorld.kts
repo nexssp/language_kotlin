@@ -7,6 +7,6 @@ var NexssStdin = ""
 NexssStdin = readLine() ?: ""
 
 // To add standard JSON parser (Klaxon ?)
-NexssStdin = NexssStdin.replace("}",",\"test\":\"test\"}")
+NexssStdin = NexssStdin.replace("}",",\"helloFromKotlin\":\""+KotlinVersion.CURRENT+"\"}")
 
 println(NexssStdin)
