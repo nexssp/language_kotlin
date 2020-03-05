@@ -3,6 +3,9 @@ languageConfig.title = "Kotlin";
 languageConfig.description =
   "Kotlin is a general purpose, open source, statically typed “pragmatic” programming language for the JVM and Android that combines object-oriented and functional programming features. ";
 languageConfig.url = "https://kotlinlang.org";
+languageConfig.founders = ["JetBrains", "Open Source Authors"];
+languageConfig.developers = [""];
+languageConfig.years = ["2011"];
 languageConfig.extensions = [".kts", ".kt"];
 languageConfig.executeCommandLine = "";
 languageConfig.printCommandLine = ""; //no console.log() needed to display result eg node -p "4+6"
