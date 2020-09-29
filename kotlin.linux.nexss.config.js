@@ -18,6 +18,13 @@ languageConfig.compilers = {
 };
 
 switch (distName) {
+  case os.distros.CENTOS:
+    languageConfig.compilers.kotlin.install = `${sudo}yum install epel-release
+${sudo}yum install -y snapd
+${sudo}systemctl enable --now snapd.socket
+${sudo}ln -s /var/lib/snapd/snap /snap
+${sudo}snap install kotlin --classic`;
+    break;
   case os.distros.FEDORA:
     languageConfig.compilers.kotlin.install = `${sudo}dnf install -y snapd
 ${sudo}ln -s /var/lib/snapd/snap /snap
