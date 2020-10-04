@@ -32,7 +32,7 @@ ${sudo}snap install kotlin --classic`;
     break;
   case os.distros.DEBIAN:
     languageConfig.compilers.kotlin.install = `${sudo}apt update
-apt install -y snapd
+${sudo}apt install -y snapd
 ${sudo}snap install kotlin --classic`;
     break;
   case os.distros.AMAZON:
@@ -42,7 +42,7 @@ ${sudo}snap install kotlin --classic`;
     languageConfig.compilers.kotlin.install = `${sudo}pacman -S --noconfirm kotlin`; // error: package org.json does not exist
     break;
   case os.distros.UBUNTU:
-    languageConfig.compilers.kotlin.install = `${sudo}apt install openjdk-11-jdk && snap install --classic kotlin`;
+    languageConfig.compilers.kotlin.install = `${sudo}apt install -y openjdk-11-jdk && snap install --classic kotlin`;
     break;
   default:
     languageConfig.compilers.kotlin.install = os.replacePMByDistro(
