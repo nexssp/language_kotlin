@@ -42,7 +42,7 @@ ${sudo}snap install kotlin --classic`;
     languageConfig.compilers.kotlin.install = `${sudo}apt install -y openjdk-11-jdk && snap install --classic kotlin`;
     break;
   default:
-    languageConfig.compilers.kotlin.install = os.replacePMByDistro(
+    languageConfig.compilers.kotlin.install = process.replacePMByDistro(
       languageConfig.compilers.kotlin.install
     );
     break;
